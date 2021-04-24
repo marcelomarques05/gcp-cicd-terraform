@@ -1,13 +1,8 @@
-org_id = "000000000000"
-
-billing_account = "000000-000000-000000"
-
-group_org_admins = "gcp-organization-admins@example.com"
-
-group_billing_admins = "gcp-billing-admins@example.com"
-
-default_region = "us-central1"
-
-//Optional - for development or for the organisation with existing projects.
-//Will place all resources under a specific folder instead of org root
-parent_folder = "01234567890"
+org_id                 = "1234567890"
+billing_account        = "000000-000000-000000"
+group_org_admins       = "gcp-org-admins@domain.com"
+group_billing_admins   = "gcp-billing-admins@domain.com"
+default_region         = "us-central1"
+default_zone           = "us-central1-f"
+folder_id              = "1234567890"
+project_id             = "cicd-terraform"
