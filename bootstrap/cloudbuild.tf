@@ -44,7 +44,7 @@ resource "google_cloudbuild_trigger" "master_trigger" {
   substitutions = {
     REPO_NAME                 = trimprefix(google_sourcerepo_repository.gcp_repo.id, "projects/${module.cloudbuild_project.project_id}/repos/")
     _DATAFLOW_JAR_BUCKET_TEST = trimprefix(google_storage_bucket.composer-dataflow-source-test["composer-dataflow-source-test"].url, "gs://")
-    _DATAFLOW_JAR_FILE_LATEST = "test.jar"
+    _DATAFLOW_JAR_FILE_LATEST = "latest.jar"
     _DATAFLOW_JAR_BUCKET_PROD = trimprefix(google_storage_bucket.composer-dataflow-source-test["composer-dataflow-source-prod"].url, "gs://")
     _COMPOSER_INPUT_BUCKET    = trimprefix(google_storage_bucket.composer-dataflow-source-test["composer-input-prod"].url, "gs://")
     _COMPOSER_DAG_BUCKET      = google_composer_environment.composer-environment.config.0.dag_gcs_prefix

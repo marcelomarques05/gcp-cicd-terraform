@@ -10,7 +10,7 @@ resource "google_composer_environment" "composer-environment" {
   config {
     node_config {
       zone            = var.default_zone
-      machine_type    = "n1-standard-4"
+      machine_type    = "n1-standard-1"
       network         = "default"
       subnetwork      = "default"
       service_account = "${module.cloudbuild_project.project_number}-compute@developer.gserviceaccount.com"

@@ -8,11 +8,6 @@ variable "billing_account" {
   type        = string
 }
 
-variable "group_org_admins" {
-  description = "Google Group for GCP Organization Administrators"
-  type        = string
-}
-
 variable "default_region" {
   description = "Default region to create resources where applicable."
   type        = string
@@ -24,25 +19,6 @@ variable "default_zone" {
   type        = string
   default     = "us-central1-f"
 }
-
-# variable "terraform_sa_email" {
-#   description = "Email for terraform service account."
-#   type        = string
-# }
-
-# variable "terraform_sa_name" {
-#   description = "Fully-qualified name of the terraform service account."
-#   type        = string
-# }
-
-# variable "terraform_state_bucket" {
-#   description = "Default state bucket, used in Cloud Build substitutions."
-#   type        = string
-# }
-
-/******************************************
-  Optional variables
-*******************************************/
 
 variable "project_labels" {
   description = "Labels to apply to the project."
@@ -77,7 +53,8 @@ variable "activate_apis" {
     "iam.googleapis.com",
     "admin.googleapis.com",
     "appengine.googleapis.com",
-    "storage-api.googleapis.com"
+    "storage-api.googleapis.com",
+    "container.googleapis.com"
   ]
 }
 
@@ -99,19 +76,10 @@ variable "create_cloud_source_repos" {
   default     = true
 }
 
-# variable "cloud_source_repos" {
-#   description = "List of Cloud Source Repos to create with CloudBuild triggers."
-#   type        = list(string)
-
-#   default = [
-#     "gcp-mlops",
-#   ]
-# }
-
 variable "cloud_source_repos" {
   description = "List of Cloud Source Repos to create with CloudBuild triggers."
   type        = string
-  default     = "gcp-mlops"
+  default     = "gcp-cicd"
 }
 
 variable "folder_id" {
