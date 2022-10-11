@@ -27,7 +27,7 @@
     <properties>
         <beam.version>2.19.0</beam.version>
         <google-clients.version>1.28.0</google-clients.version>
-        <guava.version>20.0</guava.version>
+        <guava.version>24.1.1</guava.version>
         <hamcrest.version>2.1</hamcrest.version>
         <jackson.version>2.9.10</jackson.version>
         <joda.version>2.10.3</joda.version>
